@@ -1,27 +1,185 @@
-*{
-    margin: 0%;
-    padding: 0%;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-header{
-    align-items: center;
+
+body {
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: #333;
+  color: #f5f5f5;
+  display: flex;                  /* Itens lado a lado */
+  justify-content: space-between; /* Logo à esquerda, menu à direita */
+  align-items: center;           /* Centraliza verticalmente */
+  padding: 20px;
+  margin-bottom: 40px;
+  border-radius: 5px;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
     display: flex;
-    padding: 10px;
-    justify-content: space-between;
 }
-.viagens{
-    
 
+.main-nav ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  align-items: center;
 }
-.reservas{
-    
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #0077cc;
+  transition: background 0.3s ease;
+  font-weight: bold;
 }
-.pesquisa{
-    
 
+.main-nav a:hover {
+  background-color: #005fa3;
 }
-.perfil {
 
-
-
+.pacotes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
+
+.carousel-static {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;         /* Permite rolar horizontalmente */
+  padding: 20px;
+  scroll-snap-type: x mandatory; /* Suaviza o scroll */
+}
+
+.carousel-static img {
+  height: 300px;
+  border-radius: 10px;
+  flex-shrink: 0;           /* Impede que a imagem encolha */
+  scroll-snap-align: start;
+}
+
+.pacote-card {
+  width: 280px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.pacote-imagem {
+  position: relative;
+}
+
+.pacote-imagem img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.duracao {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  background-color: #222;
+  color: white;
+  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.pacote-conteudo {
+  padding: 15px;
+}
+
+.pacote-conteudo .tipo {
+  font-size: 12px;
+  color: #888;
+  letter-spacing: 1px;
+}
+
+.pacote-conteudo h3 {
+  margin: 5px 0;
+  font-size: 18px;
+}
+
+.avaliacao {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin: 5px 0;
+}
+
+.nota {
+  background-color: #eee;
+  padding: 2px 6px;
+  border-radius: 5px;
+  font-size: 13px;
+}
+
+.estrelas {
+  color: gold;
+  font-size: 14px;
+}
+
+.saida, .detalhes {
+  font-size: 14px;
+  color: #333;
+}
+
+.pacote-preco {
+  border-top: 1px solid #eee;
+  padding: 10px 15px;
+  background-color: #f9f9f9;
+}
+
+.desconto {
+  background-color: #c8f7c5;
+  color: #2e8b57;
+  padding: 3px 6px;
+  font-size: 12px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.antigo {
+  font-size: 14px;
+  text-decoration: line-through;
+  color: #999;
+}
+
+.atual {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+}
+
+small {
+  font-size: 11px;
+  color: #777;
+}
+
+.icons {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+}
+
+
